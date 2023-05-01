@@ -58,7 +58,7 @@ const Todo = new GraphQLObjectType({
 		description: { type: GraphQLString },
 		author: { type: GraphQLString },
 		completed: { type: GraphQLBoolean },
-		dueDate: { type: timestamptz },
+		dueDate: { type: GraphQLString },
 	}),
 })
 
