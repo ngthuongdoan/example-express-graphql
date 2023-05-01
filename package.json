@@ -17,5 +17,8 @@
 		"graphql": "^16.6.0",
 		"json-server": "^0.17.3",
 		"nodemon": "^2.0.22"
+	},
+	"engines": {
+		"node": "16.x"
 	}
 }
