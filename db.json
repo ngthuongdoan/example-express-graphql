@@ -140,5 +140,87 @@
 			"restaurantId": "res_2",
 			"order": ["mitem_2"]
 		}
+	],
+	"todo": [
+		{
+			"id": "1",
+			"title": "Buy groceries",
+			"description": "Milk, bread, eggs, and cheese",
+			"completed": false,
+			"author": "John",
+			"dueDate": "2023-05-07"
+		},
+		{
+			"id": "2",
+			"title": "Finish report",
+			"description": "Write a report on the marketing campaign",
+			"completed": false,
+			"author": "Mary",
+			"dueDate": "2023-05-10"
+		},
+		{
+			"id": "3",
+			"title": "Schedule doctor's appointment",
+			"description": "Checkup for annual physical",
+			"completed": false,
+			"author": "Sarah",
+			"dueDate": "2023-05-08"
+		},
+		{
+			"id": "4",
+			"title": "Pay bills",
+			"description": "Utility bills and rent",
+			"completed": false,
+			"author": "Tom",
+			"dueDate": "2023-05-02"
+		},
+		{
+			"id": "5",
+			"title": "Exercise",
+			"description": "Go for a run or do yoga",
+			"completed": false,
+			"author": "Kate",
+			"dueDate": "2023-05-05"
+		},
+		{
+			"id": "6",
+			"title": "Clean the house",
+			"description": "Vacuum, dust, and clean the bathroom",
+			"completed": false,
+			"author": "Alex",
+			"dueDate": "2023-05-04"
+		},
+		{
+			"id": "7",
+			"title": "Read a book",
+			"description": "Finish reading 'The Catcher in the Rye'",
+			"completed": false,
+			"author": "Emily",
+			"dueDate": "2023-05-09"
+		},
+		{
+			"id": "8",
+			"title": "Call mom",
+			"description": "Check in and say hello",
+			"completed": false,
+			"author": "David",
+			"dueDate": "2023-05-06"
+		},
+		{
+			"id": "9",
+			"title": "Attend meeting",
+			"description": "Discuss project updates",
+			"completed": false,
+			"author": "Jessica",
+			"dueDate": "2023-05-11"
+		},
+		{
+			"id": "10",
+			"title": "Plan vacation",
+			"description": "Research travel destinations and book flights",
+			"completed": false,
+			"author": "Mike",
+			"dueDate": "2023-05-12"
+		}
 	]
 }

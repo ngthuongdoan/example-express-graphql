@@ -6,6 +6,8 @@ const {
 	GraphQLObjectType,
 	GraphQLSchema,
 	GraphQLList,
+	GraphQLBoolean,
+	timestamptz,
 } = graphql
 
 const MenuItem = new GraphQLObjectType({
@@ -48,9 +50,31 @@ const Order = new GraphQLObjectType({
 	}),
 })
 
+const Todo = new GraphQLObjectType({
+	name: "TodoType",
+	fields: () => ({
+		id: { type: GraphQLString },
+		title: { type: GraphQLString },
+		description: { type: GraphQLString },
+		author: { type: GraphQLString },
+		completed: { type: GraphQLBoolean },
+		dueDate: { type: timestamptz },
+	}),
+})
+
 const RootQuery = new GraphQLObjectType({
 	name: "RootQueryType",
 	fields: {
+		todo: {
+			type: new GraphQLList(Todo),
+			resolve(parentValue, args) {
+				return axios
+					.get(
+						`https://my-json-server.typicode.com/ngthuongdoan/example-express-graphql/todo`
+					)
+					.then((res) => res.data)
+			},
+		},
 		restaurants: {
 			type: new GraphQLList(Restaurant),
 			resolve(parentValue, args) {
