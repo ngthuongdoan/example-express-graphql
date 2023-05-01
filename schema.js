@@ -55,7 +55,9 @@ const RootQuery = new GraphQLObjectType({
 			type: new GraphQLList(Restaurant),
 			resolve(parentValue, args) {
 				return axios
-					.get(`http://localhost:4200/restaurants`)
+					.get(
+						`https://my-json-server.typicode.com/ngthuongdoan/example-express-graphql/restaurants`
+					)
 					.then((res) => res.data)
 			},
 		},
@@ -66,7 +68,9 @@ const RootQuery = new GraphQLObjectType({
 			},
 			resolve(parentValue, args) {
 				return axios
-					.get(`http://localhost:4200/restaurants/${args.id}`)
+					.get(
+						`https://my-json-server.typicode.com/ngthuongdoan/example-express-graphql/restaurants/${args.id}`
+					)
 					.then((res) => res.data)
 			},
 		},
@@ -74,7 +78,9 @@ const RootQuery = new GraphQLObjectType({
 			type: new GraphQLList(Customer),
 			resolve(parentValue, args) {
 				return axios
-					.get(`http://localhost:4200/customers`)
+					.get(
+						`https://my-json-server.typicode.com/ngthuongdoan/example-express-graphql/customers`
+					)
 					.then((res) => res.data)
 			},
 		},
@@ -85,14 +91,20 @@ const RootQuery = new GraphQLObjectType({
 			},
 			resolve(parentValue, args) {
 				return axios
-					.get(`https://my-json-server.typicode.com/customers/${args.id}`)
+					.get(
+						`https://my-json-server.typicode.com/ngthuongdoan/example-express-graphql/customers/${args.id}`
+					)
 					.then((res) => res.data)
 			},
 		},
 		orders: {
 			type: new GraphQLList(Order),
 			resolve(parentValue, args) {
-				return axios.get(`http://localhost:4200/orders`).then((res) => res.data)
+				return axios
+					.get(
+						`https://my-json-server.typicode.com/ngthuongdoan/example-express-graphql/orders`
+					)
+					.then((res) => res.data)
 			},
 		},
 	},
