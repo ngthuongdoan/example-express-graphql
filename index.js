@@ -1,6 +1,6 @@
 const express = require("express")
 const fetch = require("node-fetch").default
-const { graphqlHTTP } = require("express-graphql")
+// const { graphqlHTTP } = require("express-graphql")
 const schema = require("./schema")
 const cors = require("cors")
 const WEBHOOK_DEV =
@@ -8,13 +8,13 @@ const WEBHOOK_DEV =
 
 const app = express()
 app.use(cors())
-app.use(
-	"/graphql",
-	graphqlHTTP({
-		schema,
-		graphiql: true,
-	})
-)
+// app.use(
+// 	"/graphql",
+// 	graphqlHTTP({
+// 		schema,
+// 		graphiql: true,
+// 	})
+// )
 
 app.get("/bot", (req, res, next) => {
 	const chatBotHook = WEBHOOK_DEV
