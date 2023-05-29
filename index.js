@@ -16,7 +16,7 @@ app.use(cors())
 // 	})
 // )
 
-app.get("/bot", (req, res, next) => {
+app.use("/bot", (req, res, next) => {
 	const chatBotHook = WEBHOOK_DEV
 	fetch(chatBotHook, {
 		method: "POST",
