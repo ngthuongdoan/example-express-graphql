@@ -7,6 +7,8 @@ const WEBHOOK_DEV =
 	"https://chat.googleapis.com/v1/spaces/AAAAUTKGleo/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=Qg3mPwLKSIh9tFkE-yzWFUywsstLqA7TGKhn3cdsKhc%3D"
 
 const app = express()
+app.use(express.urlencoded({ extended: true }))
+
 app.use(cors())
 // app.use(
 // 	"/graphql",
@@ -26,8 +28,6 @@ app.use("/bot", (req, res, next) => {
 		body: JSON.stringify({
 			text: JSON.stringify(req.body || "", null, 2),
 		}),
-	}).then((response) => {
-		return response.json()
 	})
 	res.end()
 })
